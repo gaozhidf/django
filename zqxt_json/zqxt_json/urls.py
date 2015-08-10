@@ -1,4 +1,4 @@
-"""zqxt_tmpl2 URL Configuration
+"""zqxt_json URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -19,7 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
-    ## example_1, 2, 3, 4
-    url(r'^$', 'learn.views.home', name='home')
-
+    url(r'^$', 'learn.views.home', name='home'),
 ]

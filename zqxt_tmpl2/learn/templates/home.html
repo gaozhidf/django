@@ -8,4 +8,28 @@
 {% endfor %} -->
 
 <!-- ## example_3 -->
-站点: {{ info_dict.site }} 内容: {{ info_dict.site }}
+<!-- 站点: {{ info_dict.site }} 内容: {{ info_dict.site }} -->
+
+<!-- ## example_3_2 -->
+<!-- {% for key, value in info_dict.items %}
+	{{ key }}: {{ value }}
+{% endfor %} -->
+
+<!-- ## example_4 -->
+<!-- {% for item in List %}
+	{{ item }},
+{% endfor %} -->
+
+<!-- ## example_4_2 -->
+<!-- {% for item in List %}
+	{{ item }}{% if not forloop.last %}, {% endif%}
+{% endfor %} -->
+
+<!-- ## example_4_3 -->
+<ul>
+{% for athlete in athlete_list %}
+	<li>{{ athlete.name }}</li>
+{% empty %}
+	<li>抱歉，列表为空</li>
+{% endfor %}
+</ul>
