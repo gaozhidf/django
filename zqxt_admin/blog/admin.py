@@ -1,7 +1,22 @@
+##example_1
+# from django.contrib import admin
+
+# # Register your models here.
+
+# from .models import Article
+
+# admin.site.register(Article)
+
+##example_2
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import Article
+from .models import Person
 
-admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+	list_display = ('title', 'pub_date', 'update_time',)
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ('full_name',)
+
+admin.site.register(Article, ArticleAdmin)
+admin.site.register(Person, PersonAdmin)	# register for each porperty
